@@ -1,5 +1,11 @@
+# revision 19874
+# category Package
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-glyphlist
-Version:	20111102
+Version:	20111103
 Release:	1
 Summary:	TeXLive glyphlist package
 Group:		Publishing
@@ -35,6 +41,7 @@ TeXLive glyphlist package.
 %{_texmfdistdir}/fonts/map/glyphlist/glyphlist.txt
 %{_texmfdistdir}/fonts/map/glyphlist/pdfglyphlist.txt
 %{_texmfdistdir}/fonts/map/glyphlist/texglyphlist.txt
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -45,3 +52,5 @@ TeXLive glyphlist package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
