@@ -43,3 +43,17 @@ TeXLive glyphlist package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111103-2
++ Revision: 752339
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-1
++ Revision: 718561
+- texlive-glyphlist
+- texlive-glyphlist
+- texlive-glyphlist
+- texlive-glyphlist
+
