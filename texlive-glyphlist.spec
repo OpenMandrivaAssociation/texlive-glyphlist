@@ -1,12 +1,12 @@
-# revision 19874
+# revision 28576
 # category Package
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-glyphlist
-Version:	20111103
-Release:	2
+Version:	20131012
+Release:	1
 Summary:	TeXLive glyphlist package
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -43,17 +43,3 @@ TeXLive glyphlist package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111103-2
-+ Revision: 752339
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-1
-+ Revision: 718561
-- texlive-glyphlist
-- texlive-glyphlist
-- texlive-glyphlist
-- texlive-glyphlist
-
