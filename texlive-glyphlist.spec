@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-glyphlist
 Version:	20131012
-Release:	3
+Release:	4
 Summary:	TeXLive glyphlist package
 Group:		Publishing
 URL:		http://tug.org/texlive
