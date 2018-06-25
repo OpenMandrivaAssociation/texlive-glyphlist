@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-glyphlist
-Version:	20171106
+Version:	20180303
 Release:	1
 Summary:	TeXLive glyphlist package
 Group:		Publishing
