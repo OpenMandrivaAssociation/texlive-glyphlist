@@ -3,7 +3,7 @@ Version:	54074
 Release:	2
 Summary:	TeXLive glyphlist package
 Group:		Publishing
-URL:		http://tug.org/texlive
+URL:		https://tug.org/texlive
 License:	http://www.tug.org/texlive/LICENSE.TL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/glyphlist.r%{version}.tar.xz
 BuildArch:	noarch
