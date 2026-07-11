@@ -1,39 +1,20 @@
-Name:		texlive-glyphlist
-Version:	54074
-Release:	2
-Summary:	TeXLive glyphlist package
+%global tl_name glyphlist
+%global tl_revision 54074
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
+Summary:	Adobe Glyph List and TeX extensions
 Group:		Publishing
-URL:		https://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/glyphlist.r%{version}.tar.xz
+URL:		https://www.ctan.org/pkg/glyphlist
+License:	LPPL
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/glyphlist.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXLive glyphlist package.
+Map between traditional Adobe glyph names and Unicode points, maintained
+by Adobe. The additional texglyphlist.txt is maintained as part of lcdf-
+typetools.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/map/glyphlist/glyphlist.txt
-%{_texmfdistdir}/fonts/map/glyphlist/pdfglyphlist.txt
-%{_texmfdistdir}/fonts/map/glyphlist/texglyphlist.txt
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts %{buildroot}%{_texmfdistdir}
